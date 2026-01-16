@@ -6,9 +6,9 @@ import logo from "@/assets/mymn-logo.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
+  { href: "/events", label: "Our Events" },
   { href: "/about", label: "About Us" },
-  { href: "/projects", label: "Our Projects" },
-  { href: "/gallery", label: "Gallery" },
+  { href: "/get-involved", label: "Get Involved" },
   { href: "/contact", label: "Contact" },
 ];
 
