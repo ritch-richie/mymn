@@ -1,15 +1,21 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Heart, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/mymn-logo.png";
+import heroImage from "@/assets/hero-image.jpg";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center gradient-hero overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-white/20 blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-white/10 blur-3xl" />
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src={heroImage}
+          alt="Community gathering"
+          className="w-full h-full object-cover"
+        />
+        {/* Dark teal overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(175,100%,15%,0.85)] via-[hsl(175,100%,20%,0.8)] to-[hsl(175,100%,25%,0.75)]" />
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
