@@ -53,7 +53,7 @@ export function Hero() {
               asChild
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white/10 font-semibold px-8"
+              className="border-white text-black bg-white hover:bg-white/90 font-semibold px-8"
             >
               <Link to="/contact">Get In Touch</Link>
             </Button>
