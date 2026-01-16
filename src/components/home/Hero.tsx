@@ -15,7 +15,7 @@ export function Hero() {
           className="w-full h-full object-cover"
         />
         {/* Dark teal overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(175,100%,15%,0.85)] via-[hsl(175,100%,20%,0.8)] to-[hsl(175,100%,25%,0.75)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(175,100%,10%,0.92)] via-[hsl(175,100%,12%,0.88)] to-[hsl(175,100%,15%,0.85)]" />
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
