@@ -24,12 +24,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center">
               <img src={logo} alt="Meet Your Muslim Neighbours" className="h-12 w-auto" />
-              <div>
-                <span className="text-lg font-bold">Meet Your Muslim</span>
-                <span className="block text-sm font-semibold">Neighbours</span>
-              </div>
             </div>
             <p className="text-white/80 text-sm leading-relaxed">
               Building bridges and fostering understanding through community engagement and education since 2004.
