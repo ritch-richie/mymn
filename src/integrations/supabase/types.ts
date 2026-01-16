@@ -44,6 +44,80 @@ export type Database = {
         }
         Relationships: []
       }
+      event_images: {
+        Row: {
+          created_at: string
+          display_order: number | null
+          event_id: string
+          id: string
+          image_url: string
+        }
+        Insert: {
+          created_at?: string
+          display_order?: number | null
+          event_id: string
+          id?: string
+          image_url: string
+        }
+        Update: {
+          created_at?: string
+          display_order?: number | null
+          event_id?: string
+          id?: string
+          image_url?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "event_images_event_id_fkey"
+            columns: ["event_id"]
+            isOneToOne: false
+            referencedRelation: "events"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      events: {
+        Row: {
+          category: string
+          created_at: string
+          description: string | null
+          display_order: number | null
+          event_date: string | null
+          id: string
+          is_visible: boolean | null
+          location: string
+          title: string
+          updated_at: string
+          venue: string | null
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          description?: string | null
+          display_order?: number | null
+          event_date?: string | null
+          id?: string
+          is_visible?: boolean | null
+          location: string
+          title: string
+          updated_at?: string
+          venue?: string | null
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          description?: string | null
+          display_order?: number | null
+          event_date?: string | null
+          id?: string
+          is_visible?: boolean | null
+          location?: string
+          title?: string
+          updated_at?: string
+          venue?: string | null
+        }
+        Relationships: []
+      }
       gallery_images: {
         Row: {
           created_at: string
