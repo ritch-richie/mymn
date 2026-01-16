@@ -23,12 +23,8 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center">
             <img src={logo} alt="Meet Your Muslim Neighbours" className="h-12 w-auto" />
-            <div className="hidden sm:block">
-              <span className="text-lg font-bold text-primary">Meet Your Muslim</span>
-              <span className="block text-sm font-semibold text-primary">Neighbours</span>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}
