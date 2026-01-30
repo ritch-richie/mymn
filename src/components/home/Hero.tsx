@@ -16,7 +16,7 @@ export function Hero() {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
               {/* Left: Smaller Image */}
-              <div className="relative order-2 lg:order-1 flex-shrink-0">
+              <div className="relative flex-shrink-0">
                 <div className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden shadow-xl">
                   <img
                     src={heroImage}
@@ -27,7 +27,7 @@ export function Hero() {
               </div>
 
               {/* Right: Typography */}
-              <div className="text-left order-1 lg:order-2 flex-1">
+              <div className="text-left flex-1">
                 {/* Tag */}
                 <div className="inline-block mb-6">
                   <span className="px-4 py-2 bg-primary/10 text-primary text-sm font-medium rounded-full">
