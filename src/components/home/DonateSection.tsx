@@ -34,8 +34,8 @@ export function DonateSection() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Icon */}
-          <div className="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-8">
-            <Heart className="h-10 w-10 text-white" />
+          <div className="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-8 shadow-[0_10px_40px_rgba(0,0,0,0.2)] backdrop-blur-sm">
+            <Heart className="h-10 w-10 text-white drop-shadow-lg" />
           </div>
 
           {/* Header */}
@@ -52,7 +52,7 @@ export function DonateSection() {
             {impactItems.map((item) => (
               <div 
                 key={item.text}
-                className="flex items-center gap-3 bg-white/10 rounded-xl px-5 py-4 backdrop-blur-sm"
+                className="flex items-center gap-3 bg-white/10 rounded-xl px-5 py-4 backdrop-blur-sm shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:bg-white/15 transition-all hover:-translate-y-1"
               >
                 <item.icon className="h-5 w-5 text-white flex-shrink-0" />
                 <span className="text-white/90 text-left">
@@ -66,7 +66,7 @@ export function DonateSection() {
           <Button 
             asChild 
             size="lg"
-            className="bg-white text-primary hover:bg-white/90 font-semibold px-10 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
+            className="bg-amber-500 text-white hover:bg-amber-600 font-semibold px-10 py-6 text-lg rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] hover:shadow-[0_15px_50px_rgba(0,0,0,0.4)] hover:-translate-y-1 transition-all"
           >
             <Link to="/contact">
               Donate Now

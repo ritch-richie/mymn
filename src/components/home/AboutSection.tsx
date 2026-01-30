@@ -32,7 +32,7 @@ export function AboutSection() {
           {/* Two-column layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
             {/* Left card - Mission */}
-            <div className="bg-card rounded-2xl p-8 border border-border shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-card rounded-2xl p-8 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all hover:-translate-y-1">
               <h3 className="text-2xl font-semibold text-foreground mb-4">
                 Our Mission
               </h3>
@@ -55,7 +55,7 @@ export function AboutSection() {
             </div>
 
             {/* Right card - Aim */}
-            <div className="bg-card rounded-2xl p-8 border border-border shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-card rounded-2xl p-8 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all hover:-translate-y-1">
               <h3 className="text-2xl font-semibold text-foreground mb-4">
                 Our Aim
               </h3>
@@ -76,7 +76,7 @@ export function AboutSection() {
             {stats.map((stat) => (
               <div 
                 key={stat.label}
-                className="text-center p-6 bg-secondary/50 rounded-2xl hover:bg-secondary transition-colors"
+                className="text-center p-6 bg-secondary/50 rounded-2xl hover:bg-secondary transition-all shadow-[0_4px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_25px_rgba(0,0,0,0.1)] hover:-translate-y-1"
               >
                 <stat.icon className="h-8 w-8 text-primary mx-auto mb-3" />
                 <div className="text-3xl font-bold text-foreground mb-1">

@@ -53,14 +53,14 @@ export function WhatWeDo() {
               <Link
                 key={service.title}
                 to={service.link}
-                className="group relative bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+                className="group relative bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2"
               >
                 {/* Top gradient bar */}
                 <div className={`h-2 bg-gradient-to-r ${service.color}`} />
                 
                 <div className="p-8">
                   {/* Icon */}
-                  <div className="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-[0_8px_25px_rgba(0,167,157,0.4)]">
                     <service.icon className="h-8 w-8 text-white" />
                   </div>
 
