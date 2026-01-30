@@ -11,49 +11,47 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col">
       {/* Main Hero Content */}
-      <div className="flex-1 flex items-center justify-center bg-gradient-to-b from-[hsl(var(--cream))] to-background pt-20">
+      <div className="flex-1 flex items-center bg-gradient-to-b from-[hsl(var(--cream))] to-background pt-24 pb-12">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            {/* Large Typography with Image */}
-            <div className="mb-12">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[0.9] tracking-tight">
-                <span className="block mb-4">Meet</span>
-                <span className="flex items-center justify-center gap-4 md:gap-8 my-4">
-                  <span>Your</span>
-                  {/* Circular Image */}
-                  <div className="w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary/20">
-                    <img
-                      src={heroImage}
-                      alt="Community members"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <span className="text-primary">Muslim</span>
-                </span>
-                <span className="block">Neighbour</span>
-              </h1>
-            </div>
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Left: Typography */}
+              <div className="text-left">
+                {/* Tag */}
+                <div className="inline-block mb-6">
+                  <span className="px-4 py-2 bg-primary/10 text-primary text-sm font-medium rounded-full">
+                    Building Bridges Since 2004
+                  </span>
+                </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <Button
-                asChild
-                size="lg"
-                className="gradient-primary text-white font-semibold px-8 py-6 text-base rounded-full hover:opacity-90 transition-opacity min-w-[160px]"
-              >
-                <Link to="/events">Our Events</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-foreground/20 text-foreground hover:bg-foreground/5 font-semibold px-8 py-6 text-base rounded-full group"
-              >
-                <Link to="/about" className="flex items-center gap-2">
-                  Learn More
-                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                {/* Large Typography */}
+                <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground leading-[0.95] tracking-tight mb-8">
+                  <span className="block">Meet Your</span>
+                  <span className="block text-primary">Muslim Neighbour</span>
+                </h1>
+
+                {/* CTA Link */}
+                <Link 
+                  to="/about" 
+                  className="inline-flex items-center gap-3 text-sm font-medium text-foreground hover:text-primary transition-colors group"
+                >
+                  <span className="uppercase tracking-wider">Learn More</span>
+                  <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center group-hover:border-primary group-hover:bg-primary/5 transition-all">
+                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </div>
                 </Link>
-              </Button>
+              </div>
+
+              {/* Right: Rectangular Image */}
+              <div className="relative">
+                <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
+                  <img
+                    src={heroImage}
+                    alt="Community members connecting"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
