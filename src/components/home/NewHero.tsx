@@ -1,73 +1,104 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/mymn-logo.png";
+import { Play } from "lucide-react";
+import { useState } from "react";
 
 export function NewHero() {
-  return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden gradient-hero pt-24 md:pt-16">
-      {/* Animated geometric pattern background */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-32 h-32 border-2 border-white/30 rounded-full animate-pulse" />
-        <div className="absolute top-40 right-20 w-24 h-24 border-2 border-white/20 rounded-full animate-pulse animation-delay-200" />
-        <div className="absolute bottom-32 left-1/4 w-40 h-40 border-2 border-white/25 rounded-full animate-pulse animation-delay-400" />
-        <div className="absolute bottom-20 right-1/3 w-20 h-20 border-2 border-white/30 rounded-full animate-pulse animation-delay-600" />
-        <div className="absolute top-1/3 left-1/2 w-28 h-28 border-2 border-white/20 rounded-full animate-pulse" />
-        {/* Geometric shapes inspired by Islamic patterns */}
-        <svg className="absolute top-10 right-10 w-48 h-48 text-white/10" viewBox="0 0 100 100">
-          <polygon points="50,10 90,90 10,90" fill="none" stroke="currentColor" strokeWidth="1" />
-        </svg>
-        <svg className="absolute bottom-10 left-10 w-40 h-40 text-white/10" viewBox="0 0 100 100">
-          <rect x="20" y="20" width="60" height="60" fill="none" stroke="currentColor" strokeWidth="1" transform="rotate(45 50 50)" />
-        </svg>
-      </div>
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
-      {/* Content */}
+  return (
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden gradient-hero pt-24 md:pt-16">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Logo mark */}
-          <div className="mb-8">
-            <img 
-              src={logo} 
-              alt="Meet Your Muslim Neighbours" 
-              className="h-20 md:h-24 w-auto mx-auto drop-shadow-2xl"
-            />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left Content */}
+          <div className="max-w-xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-6">
+              Help every person to{" "}
+              <span className="bg-amber-500 px-2 py-1 rounded-md">understand</span>{" "}
+              and{" "}
+              <span className="bg-amber-500 px-2 py-1 rounded-md">connect.</span>
+            </h1>
+
+            <p className="text-lg md:text-xl text-white/85 mb-10 leading-relaxed">
+              Building bridges between communities since 2004. By inviting us to your school, 
+              mosque, or community space, you're helping foster understanding across the North West.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4">
+              <Button 
+                asChild 
+                size="lg"
+                variant="outline"
+                className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary font-semibold px-8 py-6 text-base rounded-full transition-all"
+              >
+                <Link to="/contact">Start Donating</Link>
+              </Button>
+              <Button 
+                asChild 
+                size="lg"
+                className="bg-foreground text-background hover:bg-foreground/90 font-semibold px-8 py-6 text-base rounded-full transition-all"
+              >
+                <Link to="/about">Contact Us</Link>
+              </Button>
+            </div>
           </div>
 
-          {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6 animate-fade-in-up drop-shadow-lg">
-            Bridging Communities.
-            <br />
-            Fostering Understanding.
-          </h1>
-
-          {/* Sub-headline */}
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up animation-delay-200 drop-shadow-md">
-            Meet Your Muslim Neighbour is a Muslim outreach organisation operating since 2004, 
-            helping communities across the North West understand who Muslims are and what we do.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-400">
-            <Button 
-              asChild 
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-6 text-lg rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:-translate-y-1 transition-all"
-            >
-              <Link to="/contact">Invite Us</Link>
-            </Button>
-            <Button 
-              asChild 
-              size="lg"
-              className="bg-amber-500 text-white hover:bg-amber-600 font-semibold px-8 py-6 text-lg rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:-translate-y-1 transition-all"
-            >
-              <Link to="/contact">Donate</Link>
-            </Button>
+          {/* Right - Video/Image */}
+          <div className="relative flex items-center justify-center lg:justify-end">
+            {/* Decorative background shapes */}
+            <div className="absolute -top-8 -right-8 w-72 h-72 bg-white/10 rounded-3xl rotate-12 hidden lg:block" />
+            
+            {/* Main video container */}
+            <div className="relative w-full max-w-md">
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.4)] border-4 border-white/20">
+                {!isVideoPlaying ? (
+                  <>
+                    <video
+                      src="/videos/mymn-intro.mp4"
+                      className="absolute inset-0 w-full h-full object-cover"
+                      muted
+                      loop
+                      playsInline
+                      autoPlay
+                    />
+                    {/* Play button overlay */}
+                    <button
+                      onClick={() => setIsVideoPlaying(true)}
+                      className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors group"
+                      aria-label="Play video"
+                    >
+                      <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-[0_10px_40px_rgba(0,0,0,0.3)] group-hover:scale-110 transition-transform">
+                        <Play className="w-8 h-8 text-primary ml-1" fill="currentColor" />
+                      </div>
+                    </button>
+                  </>
+                ) : (
+                  <video
+                    src="/videos/mymn-intro.mp4"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    controls
+                    autoPlay
+                    playsInline
+                  />
+                )}
+              </div>
+              
+              {/* Small floating image decoration */}
+              <div className="absolute -bottom-6 -left-6 w-28 h-28 rounded-2xl overflow-hidden shadow-[0_15px_40px_rgba(0,0,0,0.3)] border-4 border-white/30 hidden md:block">
+                <img 
+                  src="/events/liverpool-world-museum-1.png" 
+                  alt="Community event"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 }
