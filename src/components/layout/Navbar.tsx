@@ -22,7 +22,8 @@ export function Navbar() {
             <img 
               src={logo} 
               alt="Meet Your Muslim Neighbours" 
-              className="h-8 md:h-10 w-auto brightness-0 saturate-100 invert-[48%] sepia-[79%] saturate-[2476%] hue-rotate-[150deg]" 
+              className="h-8 md:h-10 w-auto"
+              style={{ filter: 'brightness(0) saturate(100%) invert(52%) sepia(94%) saturate(459%) hue-rotate(127deg) brightness(93%) contrast(101%)' }}
             />
           </Link>
 
