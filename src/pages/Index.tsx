@@ -1,19 +1,22 @@
 import { Layout } from "@/components/layout/Layout";
-import { Hero, HeroVideo } from "@/components/home/Hero";
-import { StatsCounter } from "@/components/home/StatsCounter";
-import { Mission } from "@/components/home/Mission";
-import { Projects } from "@/components/home/Projects";
-import { CTA } from "@/components/home/CTA";
+import { NewHero } from "@/components/home/NewHero";
+import { AboutSection } from "@/components/home/AboutSection";
+import { WhatWeDo } from "@/components/home/WhatWeDo";
+import { EventsCarousel } from "@/components/home/EventsCarousel";
+import { Testimonials } from "@/components/home/Testimonials";
+import { InviteUs } from "@/components/home/InviteUs";
+import { DonateSection } from "@/components/home/DonateSection";
 
 const Index = () => {
   return (
     <Layout fullscreenHero>
-      <Hero />
-      <StatsCounter />
-      <HeroVideo />
-      <Mission />
-      <Projects />
-      <CTA />
+      <NewHero />
+      <AboutSection />
+      <WhatWeDo />
+      <EventsCarousel />
+      <Testimonials />
+      <InviteUs />
+      <DonateSection />
     </Layout>
   );
 };
