@@ -11,7 +11,7 @@
     --card-foreground: 0 0% 10%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
-    --primary: 175 100% 33%;
+    --primary: 175 35% 35%;
     --primary-foreground: 0 0% 100%;
     --secondary: 40 30% 95%;
     --secondary-foreground: 0 0% 20%;
@@ -98,7 +98,7 @@
 }
 
 .gradient-hero {
-  background: hsl(var(--teal-dark));
+  background: hsl(var(--primary));
 }
 
 .text-gradient {
