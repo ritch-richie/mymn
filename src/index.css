@@ -34,12 +34,16 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 175 100% 33%;
     
-    /* Custom gradient colors - warm cream for sections */
+    /* Custom colors from palette */
     --cream: 40 40% 95%;
     --cream-dark: 40 30% 90%;
-    --teal-dark: 175 100% 18%;
-    --teal-medium: 175 100% 25%;
-    --teal-light: 175 100% 33%;
+    --navy: 215 45% 28%;
+    --teal-dark: 175 35% 35%;
+    --teal-medium: 175 35% 42%;
+    --teal-light: 175 35% 50%;
+    --coral: 5 55% 55%;
+    --yellow: 50 70% 75%;
+    --maroon: 10 60% 20%;
   }
 
   .dark {
@@ -90,11 +94,11 @@
 
 /* Custom utilities */
 .gradient-primary {
-  background: linear-gradient(135deg, hsl(var(--teal-dark)), hsl(var(--teal-medium)), hsl(var(--teal-light)));
+  background: hsl(var(--teal-medium));
 }
 
 .gradient-hero {
-  background: linear-gradient(180deg, hsl(var(--teal-dark)) 0%, hsl(var(--teal-medium)) 50%, hsl(var(--teal-light)) 100%);
+  background: hsl(var(--navy));
 }
 
 .text-gradient {
