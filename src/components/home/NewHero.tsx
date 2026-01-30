@@ -13,7 +13,7 @@ export function NewHero() {
           {/* Left Content */}
           <div className="max-w-xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-6">
-              Meet Your Muslim Neighbour.
+              Meet Your Muslim Neighbours.
             </h1>
 
             <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed">
