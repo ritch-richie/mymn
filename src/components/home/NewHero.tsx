@@ -45,13 +45,13 @@ export function NewHero() {
           </div>
 
           {/* Right - Video/Image */}
-          <div className="relative flex items-center justify-center lg:justify-end">
+          <div className="relative flex items-center justify-center lg:justify-end mb-16 lg:mb-0">
             {/* Decorative background shapes */}
             <div className="absolute -top-8 -right-8 w-72 h-72 bg-white/10 rounded-3xl rotate-12 hidden lg:block" />
             
             {/* Main video container */}
             <div className="relative w-full max-w-md">
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.4)] border-4 border-white/20">
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.3)]">
                 {!isVideoPlaying ? (
                   <>
                     <video
