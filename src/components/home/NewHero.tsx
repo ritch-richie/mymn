@@ -36,7 +36,7 @@ export function NewHero() {
                 size="lg"
                 className="bg-foreground text-background hover:bg-foreground/90 font-semibold px-8 py-6 text-base rounded-full transition-all"
               >
-                <Link to="/about">Contact Us</Link>
+                <Link to="/get-involved">Work With Us</Link>
               </Button>
             </div>
           </div>
