@@ -1,4 +1,4 @@
-import { MapPin, Calendar, Users, Heart } from "lucide-react";
+import { MapPin, Calendar } from "lucide-react";
 
 const locations = [
   "Manchester",
@@ -10,8 +10,6 @@ const locations = [
 const stats = [
   { icon: Calendar, value: "20+", label: "Years Active" },
   { icon: MapPin, value: "4", label: "Cities Served" },
-  { icon: Users, value: "150K+", label: "People Reached" },
-  { icon: Heart, value: "300+", label: "Events Held" },
 ];
 
 export function AboutSection() {
