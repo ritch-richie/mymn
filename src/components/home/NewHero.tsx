@@ -7,13 +7,13 @@ export function NewHero() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
-    <section className="relative min-h-[95vh] flex items-center overflow-hidden gradient-hero pt-32 md:pt-28 pb-24">
+    <section className="relative min-h-[95vh] flex items-center overflow-hidden gradient-hero pt-20 md:pt-20 pb-24">
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="max-w-xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-6">
-              Help every person to understand and connect.
+              Meet Your Muslim Neighbour.
             </h1>
 
             <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed">
