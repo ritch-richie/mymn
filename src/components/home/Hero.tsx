@@ -4,22 +4,22 @@ export function Hero() {
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col sm:flex-row gap-8 lg:gap-12 items-center justify-center">
-            {/* Video - Widescreen */}
-            <div className="w-full max-w-4xl">
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
+            {/* Left: Video */}
+            <div className="flex-shrink-0">
+              <div className="w-48 md:w-56 lg:w-64 rounded-2xl overflow-hidden shadow-lg">
                 <video
                   src="/videos/hero-video.mp4"
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-cover"
                 />
               </div>
             </div>
 
-            {/* Typography */}
-            <div className="text-center mt-8">
+            {/* Right: Typography */}
+            <div className="text-center sm:text-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] tracking-tight">
                 <span className="block">Meet Your</span>
                 <span className="block text-primary">Muslim Neighbour</span>
