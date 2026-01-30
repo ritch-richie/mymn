@@ -67,11 +67,18 @@ const Events = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-24 gradient-hero text-white">
-        <div className="container mx-auto px-4">
+      <section className="py-24 gradient-hero text-white relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
+            <p className="text-white/80 font-medium mb-3 text-sm uppercase tracking-wider">
+              Community Outreach
+            </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Our Events
+              Our <span className="underline decoration-4 underline-offset-8">Events</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
               Explore our community events across the UK – from exhibitions and

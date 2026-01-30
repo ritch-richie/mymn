@@ -1,80 +1,86 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-image.jpg";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-primary">
-      {/* Teal gradient background */}
-      <div className="absolute inset-0 gradient-hero" />
+    <section className="relative min-h-[90vh] flex items-center">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroImage})` }}
+      >
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
+      </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="max-w-4xl mx-auto text-center text-primary-foreground">
-          {/* Video */}
-          <div className="mb-8 animate-fade-in-up">
-            <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-lg overflow-hidden shadow-2xl">
-              <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&rel=0"
-                title="Meet Your Muslim Neighbours"
-                className="absolute inset-0 w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+        <div className="max-w-2xl">
+          {/* Content Card */}
+          <div className="bg-card/95 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl border border-border">
+            {/* Small label */}
+            <p className="text-primary font-medium mb-4 text-sm uppercase tracking-wider">
+              Building Bridges Since 2004
+            </p>
+
+            {/* Title with highlighted words */}
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+              Meet Your{" "}
+              <span className="text-primary">Muslim</span>{" "}
+              Neighbours. Foster{" "}
+              <span className="text-primary">Understanding</span>.
+            </h1>
+
+            {/* Description */}
+            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+              We are a community-based project dedicated to promoting dialogue and understanding 
+              between Muslim and non-Muslim communities across the UK.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                asChild
+                size="lg"
+                className="gradient-primary text-white font-semibold px-8 rounded-full"
+              >
+                <Link to="/about">
+                  Learn About Us
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 rounded-full"
+              >
+                <Link to="/events">
+                  <Play className="mr-2 h-4 w-4" />
+                  Our Events
+                </Link>
+              </Button>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Title */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in-up animation-delay-200">
-            Meet Your Muslim
-            <span className="block">Neighbours</span>
-          </h1>
-
-          {/* Tagline */}
-          <p className="text-xl md:text-2xl font-light mb-8 opacity-90 animate-fade-in-up animation-delay-400">
-            Building Bridges. Fostering Understanding.
-          </p>
-
-          {/* Description */}
-          <p className="text-lg md:text-xl opacity-80 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up animation-delay-600">
-            We are a community-based project dedicated to promoting dialogue and understanding 
-            between Muslim and non-Muslim communities across the UK.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-600">
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold px-8"
-            >
-              <Link to="/about">
-                Learn About Us
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-primary-foreground text-primary bg-primary-foreground hover:bg-primary-foreground/90 font-semibold px-8"
-            >
-              <Link to="/contact">Get In Touch</Link>
-            </Button>
-          </div>
-
-          {/* Quick Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mt-20 pt-12 border-t border-primary-foreground/20">
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold mb-2">100+</div>
-              <div className="opacity-70">Locations</div>
+      {/* Stats Bar */}
+      <div className="absolute bottom-0 left-0 right-0 gradient-primary">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-3 py-6 text-white text-center">
+            <div>
+              <div className="text-3xl md:text-4xl font-bold">100+</div>
+              <div className="text-white/80 text-sm">Locations</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold mb-2">328</div>
-              <div className="opacity-70">Events</div>
+            <div className="border-x border-white/20">
+              <div className="text-3xl md:text-4xl font-bold">328</div>
+              <div className="text-white/80 text-sm">Events</div>
             </div>
-            <div className="text-center col-span-2 md:col-span-1">
-              <div className="text-4xl md:text-5xl font-bold mb-2">152K+</div>
-              <div className="opacity-70">Visitors</div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold">152K+</div>
+              <div className="text-white/80 text-sm">Visitors</div>
             </div>
           </div>
         </div>
