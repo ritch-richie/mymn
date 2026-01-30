@@ -14,9 +14,20 @@ export function Hero() {
       <div className="flex-1 flex items-center bg-gradient-to-b from-[hsl(var(--cream))] to-background pt-24 pb-12">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* Left: Typography */}
-              <div className="text-left">
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+              {/* Left: Smaller Image */}
+              <div className="relative order-2 lg:order-1 flex-shrink-0">
+                <div className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-2xl overflow-hidden shadow-xl">
+                  <img
+                    src={heroImage}
+                    alt="Community members connecting"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Right: Typography */}
+              <div className="text-left order-1 lg:order-2 flex-1">
                 {/* Tag */}
                 <div className="inline-block mb-6">
                   <span className="px-4 py-2 bg-primary/10 text-primary text-sm font-medium rounded-full">
@@ -40,17 +51,6 @@ export function Hero() {
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </div>
                 </Link>
-              </div>
-
-              {/* Right: Rectangular Image */}
-              <div className="relative">
-                <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
-                  <img
-                    src={heroImage}
-                    alt="Community members connecting"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
               </div>
             </div>
           </div>
