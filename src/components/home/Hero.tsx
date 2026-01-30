@@ -17,9 +17,9 @@ export function Hero() {
             {/* Large Typography with Image */}
             <div className="mb-12">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[0.9] tracking-tight">
-                <span className="block">Meet Your</span>
+                <span className="block mb-4">Meet</span>
                 <span className="flex items-center justify-center gap-4 md:gap-8 my-4">
-                  <span className="text-primary">Muslim</span>
+                  <span>Your</span>
                   {/* Circular Image */}
                   <div className="w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary/20">
                     <img
@@ -28,8 +28,9 @@ export function Hero() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <span>Neighbours</span>
+                  <span className="text-primary">Muslim</span>
                 </span>
+                <span className="block">Neighbour</span>
               </h1>
             </div>
 
