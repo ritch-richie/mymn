@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { NewHero } from "@/components/home/NewHero";
 import { IntroVideo } from "@/components/home/IntroVideo";
 import { AboutSection } from "@/components/home/AboutSection";
+import { LocationsMap } from "@/components/home/LocationsMap";
 import { WhatWeDo } from "@/components/home/WhatWeDo";
 import { EventsCarousel } from "@/components/home/EventsCarousel";
 import { Testimonials } from "@/components/home/Testimonials";
@@ -15,6 +16,7 @@ const Index = () => {
       <NewHero />
       <IntroVideo />
       <AboutSection />
+      <LocationsMap />
       <WhatWeDo />
       <EventsCarousel />
       <Testimonials />
