@@ -1,21 +1,16 @@
 import { Link } from "react-router-dom";
-import { Mail, Instagram, Facebook } from "lucide-react";
+import { Mail, Instagram, Facebook, MapPin } from "lucide-react";
 import logo from "@/assets/mymn-logo.png";
 
 const quickLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/projects", label: "Our Projects" },
-  { href: "/gallery", label: "Gallery" },
+  { href: "/events", label: "Events" },
   { href: "/contact", label: "Contact" },
 ];
 
-const projects = [
-  { href: "/projects#open-days", label: "Open Days & Exhibitions" },
-  { href: "/projects#schools", label: "School Visits" },
-  { href: "/projects#mosque-tours", label: "Mosque Tours" },
-  { href: "/projects#universities", label: "University Programs" },
-];
+const locations = ["Manchester", "Liverpool", "Lancaster", "Leeds"];
 
 export function Footer() {
   return (
@@ -28,7 +23,7 @@ export function Footer() {
               <img src={logo} alt="Meet Your Muslim Neighbours" className="h-12 w-auto" />
             </div>
             <p className="text-white/80 text-sm leading-relaxed">
-              Building bridges and fostering understanding through community engagement and education since 2004.
+              Bridging communities and fostering understanding through dialogue, education, and cultural exchange since 2004.
             </p>
           </div>
 
@@ -49,18 +44,14 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Projects */}
+          {/* Locations */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Our Projects</h4>
+            <h4 className="font-semibold text-lg mb-4">Locations Served</h4>
             <ul className="space-y-2">
-              {projects.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    to={link.href}
-                    className="text-white/80 hover:text-white transition-colors text-sm"
-                  >
-                    {link.label}
-                  </Link>
+              {locations.map((location) => (
+                <li key={location} className="flex items-center gap-2 text-white/80 text-sm">
+                  <MapPin className="h-3.5 w-3.5" />
+                  {location}
                 </li>
               ))}
             </ul>
