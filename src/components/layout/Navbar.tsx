@@ -18,7 +18,7 @@ export function Navbar() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-primary border-b border-primary/20">
       <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
@@ -26,8 +26,7 @@ export function Navbar() {
             <img 
               src={logo} 
               alt="Meet Your Muslim Neighbours" 
-              className="h-8 md:h-10 w-auto"
-              style={{ filter: 'brightness(0) saturate(100%) invert(45%) sepia(30%) saturate(500%) hue-rotate(130deg) brightness(95%) contrast(90%)' }}
+              className="h-8 md:h-10 w-auto brightness-0 invert"
             />
           </Link>
 
@@ -39,8 +38,8 @@ export function Navbar() {
                 to={link.href}
                 className={`text-sm font-medium transition-colors ${
                   isActive(link.href)
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
+                    ? "text-white"
+                    : "text-white/80 hover:text-white"
                 }`}
               >
                 {link.label}
@@ -49,7 +48,7 @@ export function Navbar() {
             <Button 
               asChild 
               size="sm"
-              className="rounded-lg px-6 text-sm bg-foreground text-background hover:bg-foreground/90"
+              className="rounded-lg px-6 text-sm bg-white text-primary hover:bg-white/90"
             >
               <Link to="/get-involved">Work With Us</Link>
             </Button>
@@ -58,7 +57,7 @@ export function Navbar() {
           {/* Mobile Hamburger Menu */}
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon" className="h-10 w-10">
+              <Button variant="ghost" size="icon" className="h-10 w-10 text-white hover:bg-white/10">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
