@@ -47,7 +47,7 @@ export function Footer() {
             {/* Social Icons */}
             <div className="flex gap-3">
               <a
-                href="https://www.instagram.com/meetyourmuslimneighbours/"
+                href="https://www.instagram.com/meetyourmuslimneighbour/?__d=1%2F%2F"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-background/10 hover:bg-background/20 transition-colors"
@@ -56,7 +56,7 @@ export function Footer() {
                 <Instagram className="h-4 w-4" />
               </a>
               <a
-                href="https://www.facebook.com/maboromymn/"
+                href="https://www.facebook.com/meetyourmuslimneighbour/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-background/10 hover:bg-background/20 transition-colors"
@@ -147,7 +147,7 @@ export function Footer() {
         <div className="border-t border-background/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-background/50 text-sm">
-              © {new Date().getFullYear()} Meet Your Muslim Neighbours. All rights reserved.
+              © {new Date().getFullYear()} Meet Your Muslim Neighbours. All rights reserved. Registered as Your Muslim Neighbour.
             </p>
             <div className="flex items-center gap-4 text-sm text-background/50">
               <span>Serving Manchester, Liverpool, Lancaster & Leeds</span>
