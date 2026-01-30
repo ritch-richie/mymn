@@ -46,10 +46,6 @@ export function StatsCounter() {
             </p>
           </div>
 
-          {/* Stats */}
-          <div className="flex justify-center mb-10">
-            <StatItem end={20} suffix="+" label="Years active" icon={Award} />
-          </div>
 
           {/* Learn More Button */}
           <div className="text-center">
