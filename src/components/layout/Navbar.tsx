@@ -22,7 +22,7 @@ export function Navbar() {
             <img 
               src={logo} 
               alt="Meet Your Muslim Neighbours" 
-              className="h-8 md:h-10 w-auto" 
+              className="h-8 md:h-10 w-auto brightness-0 saturate-100 invert-[48%] sepia-[79%] saturate-[2476%] hue-rotate-[150deg]" 
             />
           </Link>
 
