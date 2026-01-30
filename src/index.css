@@ -98,7 +98,7 @@
 }
 
 .gradient-hero {
-  background: hsl(var(--navy));
+  background: hsl(var(--teal-dark));
 }
 
 .text-gradient {

@@ -95,7 +95,7 @@ export function NewHero() {
       </div>
 
       {/* Bottom gradient fade - extended for smoother transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[hsl(var(--teal-medium))] via-[hsl(var(--teal-medium)/0.5)] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[hsl(var(--cream))] via-[hsl(var(--teal-light)/0.3)] to-transparent" />
     </section>
   );
 }

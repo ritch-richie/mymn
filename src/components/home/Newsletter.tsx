@@ -20,10 +20,10 @@ export function Newsletter() {
   };
 
   return (
-    <section className="py-20 gradient-primary">
+    <section className="py-20 bg-[hsl(var(--cream))]">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
-          <div className="bg-[hsl(var(--teal-dark))] rounded-3xl p-8 md:p-12 text-center">
+          <div className="bg-primary rounded-3xl p-8 md:p-12 text-center">
             {/* Badge */}
             <span className="inline-block px-4 py-1.5 bg-white/20 text-white text-sm font-medium rounded-full mb-6">
               Get Notified
