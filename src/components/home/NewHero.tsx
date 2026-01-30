@@ -7,19 +7,16 @@ export function NewHero() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden gradient-hero pt-24 md:pt-16">
+    <section className="relative min-h-[95vh] flex items-center overflow-hidden gradient-hero pt-32 md:pt-28 pb-24">
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="max-w-xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-6">
-              Help every person to{" "}
-              <span className="bg-amber-500 px-2 py-1 rounded-md">understand</span>{" "}
-              and{" "}
-              <span className="bg-amber-500 px-2 py-1 rounded-md">connect.</span>
+              Help every person to understand and connect.
             </h1>
 
-            <p className="text-lg md:text-xl text-white/85 mb-10 leading-relaxed">
+            <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed">
               Building bridges between communities since 2004. By inviting us to your school, 
               mosque, or community space, you're helping foster understanding across the North West.
             </p>
@@ -97,8 +94,8 @@ export function NewHero() {
         </div>
       </div>
 
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
+      {/* Bottom gradient fade - extended for smoother transition */}
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[hsl(var(--teal-medium))] via-[hsl(var(--teal-medium)/0.5)] to-transparent" />
     </section>
   );
 }
