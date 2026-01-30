@@ -75,7 +75,7 @@ export function Testimonials() {
           {testimonials.slice(0, 6).map((testimonial, index) => (
             <div 
               key={index}
-              className="bg-card rounded-2xl p-6 border border-border shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
+              className="bg-card rounded-2xl p-6 border border-border shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.15)] transition-all hover:-translate-y-2"
             >
               {/* Quote icon */}
               <Quote className="h-8 w-8 text-primary/30 mb-4" />

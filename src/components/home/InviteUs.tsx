@@ -38,9 +38,9 @@ export function InviteUs() {
             {inviteOptions.map((option) => (
               <div 
                 key={option.title}
-                className="bg-card rounded-2xl p-8 border border-border hover:border-primary/50 transition-all hover:shadow-lg"
+                className="bg-card rounded-2xl p-8 border border-border hover:border-primary/50 transition-all shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] hover:-translate-y-2"
               >
-                <div className="w-14 h-14 rounded-xl gradient-primary flex items-center justify-center mb-6">
+                <div className="w-14 h-14 rounded-xl gradient-primary flex items-center justify-center mb-6 shadow-[0_8px_25px_rgba(0,167,157,0.4)]">
                   <option.icon className="h-7 w-7 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">
@@ -58,7 +58,7 @@ export function InviteUs() {
             <Button 
               asChild 
               size="lg"
-              className="gradient-primary text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
+              className="gradient-primary text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-[0_10px_40px_rgba(0,167,157,0.4)] hover:shadow-[0_15px_50px_rgba(0,167,157,0.5)] hover:-translate-y-1 transition-all"
             >
               <Link to="/contact" className="flex items-center gap-2">
                 Invite Us to Your Organisation
