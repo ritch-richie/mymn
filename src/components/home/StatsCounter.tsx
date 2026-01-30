@@ -1,5 +1,5 @@
 import { useCountUp } from "@/hooks/useCountUp";
-import { MapPin, Calendar, Users, Award } from "lucide-react";
+import { Award } from "lucide-react";
 
 interface StatItemProps {
   end: number;
@@ -46,11 +46,8 @@ export function StatsCounter() {
             </p>
           </div>
 
-          {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10">
-            <StatItem end={100} suffix="+" label="Locations visited" icon={MapPin} />
-            <StatItem end={328} label="Events hosted" icon={Calendar} />
-            <StatItem end={152} suffix="K+" label="People reached" icon={Users} />
+          {/* Stats */}
+          <div className="flex justify-center mb-10">
             <StatItem end={20} suffix="+" label="Years active" icon={Award} />
           </div>
 
