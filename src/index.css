@@ -5,26 +5,26 @@
 @layer base {
   :root {
     /* #00a79d = HSL 175 100% 33% */
-    --background: 175 20% 98%;
-    --foreground: 175 50% 10%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
     --card: 0 0% 100%;
-    --card-foreground: 175 50% 10%;
+    --card-foreground: 0 0% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 175 50% 10%;
+    --popover-foreground: 0 0% 10%;
     --primary: 175 100% 33%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 175 30% 92%;
-    --secondary-foreground: 175 80% 20%;
-    --muted: 175 20% 96%;
-    --muted-foreground: 175 20% 40%;
-    --accent: 175 40% 88%;
-    --accent-foreground: 175 80% 15%;
+    --secondary: 40 30% 95%;
+    --secondary-foreground: 0 0% 20%;
+    --muted: 40 20% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 40 40% 92%;
+    --accent-foreground: 0 0% 15%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 175 20% 85%;
-    --input: 175 20% 85%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
     --ring: 175 100% 33%;
-    --radius: 0.5rem;
+    --radius: 0.75rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 175 100% 33%;
@@ -34,7 +34,9 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 175 100% 33%;
     
-    /* Custom gradient colors - darker teal for banners */
+    /* Custom gradient colors - warm cream for sections */
+    --cream: 40 40% 95%;
+    --cream-dark: 40 30% 90%;
     --teal-dark: 175 100% 18%;
     --teal-medium: 175 100% 25%;
     --teal-light: 175 100% 33%;

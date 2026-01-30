@@ -1,49 +1,64 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Heart } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowUpRight, Calendar, School, Users } from "lucide-react";
+
+const bookingOptions = [
+  {
+    icon: Calendar,
+    title: "Book an Exhibition",
+    description: "Host our interactive exhibition at your venue",
+    link: "/contact",
+  },
+  {
+    icon: School,
+    title: "Book a School Visit",
+    description: "Educational visits for students of all ages",
+    link: "/contact",
+  },
+  {
+    icon: Users,
+    title: "Book Outreach Event",
+    description: "Community engagement and dialogue sessions",
+    link: "/contact",
+  },
+];
 
 export function CTA() {
   return (
-    <section className="py-24 gradient-primary relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto text-center text-white">
-          <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-8">
-            <Heart className="h-8 w-8" />
-          </div>
-          <p className="text-white/80 font-medium mb-3 text-sm uppercase tracking-wider">
-            Be Part of the Change
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Want to <span className="underline decoration-4 underline-offset-4">Get Involved</span>?
+    <section className="py-24 bg-[hsl(var(--cream))]">
+      <div className="container mx-auto px-4">
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-6">
+            Get Involved
+          </span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
+            Want to <span className="text-primary">Book an Event</span>?
           </h2>
-          <p className="text-xl text-white/80 mb-10 leading-relaxed">
+          <p className="text-lg text-muted-foreground leading-relaxed">
             Whether you're a school looking to book a visit, a community group wanting 
             to arrange a mosque tour, or simply curious to learn more—we'd love to hear from you.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 font-semibold px-8 rounded-full"
+        </div>
+
+        {/* Booking Options */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {bookingOptions.map((option) => (
+            <Link
+              key={option.title}
+              to={option.link}
+              className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg"
             >
-              <Link to="/contact">
-                Contact Us
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white/10 font-semibold px-8 rounded-full"
-            >
-              <Link to="/events">Explore Our Events</Link>
-            </Button>
-          </div>
+              <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+                <option.icon className="h-6 w-6 text-foreground group-hover:text-primary transition-colors" />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2 flex items-center justify-between">
+                {option.title}
+                <ArrowUpRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              </h3>
+              <p className="text-muted-foreground">
+                {option.description}
+              </p>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

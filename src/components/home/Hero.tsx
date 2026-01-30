@@ -1,84 +1,94 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-image.jpg";
 
 export function Hero() {
+  const scrollToContent = () => {
+    window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+  };
+
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          poster="/placeholder.svg"
-        >
-          {/* Add your video source here */}
-          <source src="/videos/hero-video.mp4" type="video/mp4" />
-        </video>
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
-      </div>
+    <section className="relative min-h-screen flex flex-col">
+      {/* Main Hero Content */}
+      <div className="flex-1 flex items-center justify-center bg-gradient-to-b from-[hsl(var(--cream))] to-background pt-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto text-center">
+            {/* Large Typography with Image */}
+            <div className="mb-12">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground leading-[0.9] tracking-tight">
+                <span className="block">Meet Your</span>
+                <span className="flex items-center justify-center gap-4 md:gap-8 my-4">
+                  <span className="text-primary">Muslim</span>
+                  {/* Circular Image */}
+                  <div className="w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary/20">
+                    <img
+                      src={heroImage}
+                      alt="Community members"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <span>Neighbours</span>
+                </span>
+              </h1>
+            </div>
 
-      {/* Content */}
-      <div className="container mx-auto px-4 relative z-10 text-center">
-        <div className="max-w-4xl mx-auto">
-          {/* Small label */}
-          <p className="text-primary font-medium mb-6 text-sm md:text-base uppercase tracking-widest animate-fade-in-up">
-            Building Bridges Since 2004
-          </p>
-
-          {/* Main Title */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up animation-delay-200">
-            Meet Your{" "}
-            <span className="text-primary">Muslim</span>{" "}
-            Neighbours
-          </h1>
-
-          {/* Tagline */}
-          <p className="text-xl md:text-2xl text-white/80 mb-4 animate-fade-in-up animation-delay-400">
-            Fostering Understanding. Building Community.
-          </p>
-
-          {/* Description */}
-          <p className="text-lg text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up animation-delay-600">
-            A community-based project dedicated to promoting dialogue and understanding 
-            between Muslim and non-Muslim communities across the UK.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-600">
-            <Button
-              asChild
-              size="lg"
-              className="gradient-primary text-white font-semibold px-8 py-6 text-lg rounded-full hover:opacity-90 transition-opacity"
-            >
-              <Link to="/about">
-                Learn About Us
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-6 text-lg rounded-full backdrop-blur-sm"
-            >
-              <Link to="/events">
-                <Play className="mr-2 h-5 w-5" />
-                Our Events
-              </Link>
-            </Button>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <Button
+                asChild
+                size="lg"
+                className="gradient-primary text-white font-semibold px-8 py-6 text-base rounded-full hover:opacity-90 transition-opacity min-w-[160px]"
+              >
+                <Link to="/events">Our Events</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-foreground/20 text-foreground hover:bg-foreground/5 font-semibold px-8 py-6 text-base rounded-full group"
+              >
+                <Link to="/about" className="flex items-center gap-2">
+                  Learn More
+                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-white/50 rounded-full" />
+      {/* Bottom Bar */}
+      <div className="bg-[hsl(var(--cream-dark))] border-t border-border/50">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between py-5">
+            {/* Left - Quick Stats */}
+            <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+              <span className="font-medium">Since 2004</span>
+              <span className="w-px h-4 bg-border" />
+              <span>Building Understanding Across the UK</span>
+            </div>
+
+            {/* Center - Partner mentions */}
+            <div className="flex items-center gap-6 text-sm text-muted-foreground">
+              <span className="font-medium">Schools</span>
+              <span className="w-px h-4 bg-border hidden sm:block" />
+              <span className="hidden sm:block">Universities</span>
+              <span className="w-px h-4 bg-border hidden md:block" />
+              <span className="hidden md:block">Community Groups</span>
+            </div>
+
+            {/* Right - Scroll Down */}
+            <button
+              onClick={scrollToContent}
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors group"
+            >
+              <span className="hidden sm:inline">Scroll Down</span>
+              <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center group-hover:border-primary group-hover:text-primary transition-colors">
+                <ChevronDown className="h-4 w-4" />
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </section>

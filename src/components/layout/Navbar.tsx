@@ -31,19 +31,12 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-      {/* Top accent bar - only show when scrolled or not on home */}
-      <div 
-        className={`gradient-primary h-1 transition-all duration-300 ${
-          isTransparent ? "opacity-0" : "opacity-100"
-        }`} 
-      />
-      
       {/* Main nav */}
       <nav 
         className={`transition-all duration-300 ${
           isTransparent 
             ? "bg-transparent" 
-            : "bg-background/95 backdrop-blur-md border-b border-border"
+            : "bg-background/95 backdrop-blur-md border-b border-border shadow-sm"
         }`}
       >
         <div className="container mx-auto px-4">
@@ -97,7 +90,7 @@ export function Navbar() {
                 asChild 
                 className={`rounded-full px-6 transition-all duration-300 ${
                   isTransparent 
-                    ? "bg-white text-primary hover:bg-white/90" 
+                    ? "bg-foreground text-background hover:bg-foreground/90" 
                     : "gradient-primary text-white"
                 }`}
               >
